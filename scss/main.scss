@@ -1,0 +1,25 @@
+@import 'vars';
+@import 'global';
+@import 'normalize';
+
+.header {
+    margin-bottom: 143px;
+    padding-top: 62px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu-list {
+        display: flex;
+        gap: 30px;
+    }
+}
+.main {
+    text-align: center;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__text {
+        margin-bottom: 47px;
+    }
+}
