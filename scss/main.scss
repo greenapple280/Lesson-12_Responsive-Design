@@ -3,33 +3,88 @@
 @import 'normalize';
 
 .header {
-    margin-bottom: 143px;
+    margin-bottom: 139px;
     padding-top: 62px;
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__menu-list {
         display: flex;
         gap: 30px;
-        padding-right: 53px
+        margin-right: 53px;
     }
     &__menu-link {
         @extend %text;
     }
+    &__menu-btn {
+        display: none;
+     /*.menu__btn span {
+            background-color: #000;
+            height: 2px;
+            width: 100%;
+        } */
+    }
 }
 .main {
-    text-align: center;
+    &__content {
+        text-align: center;
+    }
     &__title {
         margin-bottom: 30px;
         @extend %title;
     }
     &__text {
+        display: inline-block;
         margin-bottom: 47px;
         @extend %text;
         max-width: 573px;
         width: 100%;
         text-align: center;
         font-size: 22px;
+    }
+    &__img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        margin-bottom: 230px;
+    }
+    .main {
+        &__title {
+            font-size: 72px;
+            margin-bottom: 22px;
+        }
+        &__text {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .header {
+        margin-bottom: 64px;
+        &__menu-list {
+            display: none;
+            margin-right: 0;
+        }
+        &__menu-btn {
+            display: block;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .main {
+        &__title {
+            font-size: 36px;
+            margin-bottom: 27px;
+        }
+        &__text {
+            font-size: 12px;
+            margin-bottom: 57px;
+        }
     }
 }
